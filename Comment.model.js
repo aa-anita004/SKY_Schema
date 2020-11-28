@@ -15,8 +15,8 @@ const Comment= new Schema({
 const comment1= mongoose.model('Comment', Comment);
 
 mongoose.connect("mongodb://127.0.0.1:27017/MyCalender", {useNewUrlParser: true});
-const NewComment = new comment1({Id: '123',
-    userId: '243667',
+const NewComment = new comment1({id: '123',
+     userId: '243667',
      description: 'comment model',
-    isDeleted: false})
+     isDeleted: false})
 NewComment.save()
