@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -17,7 +16,7 @@ const Emotion1= mongoose.model('Emotion', Emotion);
 
 mongoose.connect("mongodb://127.0.0.1:27017/MyCalender", {useNewUrlParser: true});
 const NewEmotion = new Emotion1({postId: '123',
-    EmotionType: 'like',
-    count: '1',
+    emotionType: 'like',
+    count: '0',
     isDeleted: false})
 NewEmotion.save()
