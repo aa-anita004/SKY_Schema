@@ -1,3 +1,6 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
 const Messages= new Schema({
 
     senderId: {type: String, required: true },
@@ -12,8 +15,8 @@ const Messages= new Schema({
 const Messages1= mongoose.model('Messages', Messages);
 
 mongoose.connect("mongodb://127.0.0.1:27017/MyCalender", {useNewUrlParser: true});
-const NewMessages = new Messages1({senderId,
-    receiverId,
-    message,
-    isDeleted})
+const NewMessages = new Messages1({senderId: '9084576346',
+    receiverId: 'ggu8990680',
+    message: 'msg rcvd',
+    isDeleted: false})
 NewMessages.save()
